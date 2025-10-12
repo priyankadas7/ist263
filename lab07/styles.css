@@ -1,57 +1,57 @@
 
+
 body {
-  background-color: #0f4c5c;   /* Midnight Green */
-  color: #e36414;              /* Spanish Orange */
+  background-color: #fdf0d5;   /* Cream background */
+  color: #003049;              /* Navy text */
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fb8b24;              /* UT Orange */
+  color: #780000;              /* Deep Burgundy for headings */
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 p {
-  color: #e36414;              /* Spanish Orange */
+  color: #003049;              /* Navy text for readability */
   line-height: 1.6;
 }
 
 a {
-  color: #fb8b24;              /* UT Orange */
+  color: #c1121f;              /* Bright Red for links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #9a031e;              /* Carmine */
+  color: #669bbc;              /* Soft Blue on hover */
   text-decoration: underline;
 }
 
 nav {
-  background-color: #5f0f40;   /* Tyrian Purple */
-  padding: 1em;
+  background-color: #003049;   /* Navy background */
+  padding: 10px;               /* Adds inner spacing inside nav */
+  margin-bottom: 30px;         /* Adds space below nav for visual separation */
   display: flex;
   justify-content: center;
   gap: 1.5em;
+  border-radius: 5px;          /* Optional: soft rounded edges */
 }
 
 nav a {
-  color: #fb8b24;              /* UT Orange */
+  color: #fdf0d5;              /* Cream nav links */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding: 5px 10px;           /* Adds space around each link for better click area */
+  border-radius: 4px;
 }
 
 nav a:hover,
 nav a.active {
-  background-color: #9a031e;   /* Carmine */
-  color: #ffffff;
-  padding: 0.5em 1em;
-  border-radius: 5px;
+  background-color: #c1121f;   /* Bright Red highlight */
+  color: #fdf0d5;              /* Cream text on hover */
   transition: all 0.3s ease;
 }
-
-
-
