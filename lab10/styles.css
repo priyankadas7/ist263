@@ -1,5 +1,6 @@
 
 
+/* ========== GLOBAL STYLES ========== */
 body {
   background-color: #fdf0d5;   /* Cream background */
   color: #003049;              /* Navy text */
@@ -12,10 +13,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #780000;              /* Deep Burgundy for headings */
   font-weight: 700;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 p {
-  color: #003049;              /* Navy text for readability */
+  color: #003049;
   line-height: 1.6;
 }
 
@@ -30,14 +32,15 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ========== NAVIGATION ========== */
 nav {
   background-color: #003049;   /* Navy background */
-  padding: 10px;               /* Adds inner spacing inside nav */
-  margin-bottom: 30px;         /* Adds space below nav for visual separation */
+  padding: 10px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   gap: 1.5em;
-  border-radius: 5px;          /* Optional: soft rounded edges */
+  border-radius: 5px;
 }
 
 nav a {
@@ -45,18 +48,113 @@ nav a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 5px 10px;           /* Adds space around each link for better click area */
+  padding: 5px 10px;
   border-radius: 4px;
 }
 
 nav a:hover,
 nav a.active {
   background-color: #c1121f;   /* Bright Red highlight */
-  color: #fdf0d5;              /* Cream text on hover */
+  color: #fdf0d5;
   transition: all 0.3s ease;
 }
 
+nav span {
+  color: #fdf0d5; /* Cream pipes */
+}
+
+/* ========== FLEXIBLE IMAGE ========== */
 .responsive-img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========== CONTACT PAGE FLEXBOX LAYOUTS ========== */
+.container1,
+.container2 {
+  display: flex;
+  gap: 40px;
+  background-color: #f8f8f8;
+  border-radius: 1em;
+  padding: 20px;
+  margin: 20px;
+}
+
+.container2 {
+  flex-wrap: wrap; /* Enables wrapping for mobile/tablet */
+}
+
+.address,
+.linkedin,
+.form,
+.map {
+  flex: 1;
+  background-color: #f0f0f0;
+  border-radius: 1em;
+  padding: 20px;
+}
+
+.linkedin {
+  text-align: center;
+}
+
+.linkedin img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ========== FORM STYLING ========== */
+form {
+  display: block;
+  line-height: 1.8;
+}
+
+/* ========== MAP ========== */
+iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 1em;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #003049;
+}
+
+/* ========== RESPONSIVE MEDIA QUERY ========== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  nav span {
+    display: none; /* Hide pipes on mobile */
+  }
+
+  .container1,
+  .container2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .left,
+  footer .right {
+    float: none;
+    text-align: center;
+    max-width: 100%;
+  }
 }
