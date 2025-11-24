@@ -1,212 +1,167 @@
-/* ================================
-   COLOR PALETTE
-================================ */
 :root {
-  --maroon: #7A1F2A;
-  --maroon-dark: #611822;
-
-  --cream: #FFF8F0;
-  --cream-light: #F7F2EB;
-
-  --navy: #12345B;
-  --navy-light: #1A4A7A;
-
-  --espresso: #3B2414;
-  --border-light: #DCCFC2;
+  --cream: #F5F0E8;
+  --maroon: #6D1B33;
+  --navy: #112A46;
+  --espresso: #3B2F2F;
+  --taupe: #D8CFC4;
 }
 
-/* ================================
-   GLOBAL STYLES
-================================ */
-body {
-  font-family: Arial, Helvetica, sans-serif;
+* {
   margin: 0;
-  background-color: var(--cream);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cream);
+  font-family: "Georgia", serif;
   color: var(--espresso);
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 6px;
-}
-
-h1, h2 {
-  color: var(--maroon-dark);
-}
-
-main {
-  padding: 20px;
-}
-
-/* ================================
-   HEADER + NAVIGATION
-================================ */
-.site-header {
-  background-color: var(--cream-light);
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid var(--border-light);
+  line-height: 1.5;
+  padding-bottom: 60px;
 }
 
 .navbar {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20px;
+  background: var(--cream);
+  border-bottom: 2px solid var(--taupe);
 }
 
 .navbar a {
   text-decoration: none;
-  color: var(--navy);
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: 0.3s ease;
+  font-weight: 600;
+  color: var(--espresso);
+  transition: 0.3s;
 }
 
 .navbar a:hover {
-  background-color: var(--navy-light);
-  color: white;
+  color: var(--maroon);
 }
 
 .navbar .active {
-  background-color: var(--maroon);
-  color: white;
+  color: var(--navy);
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 3px;
 }
 
 .page-title {
-  font-size: 2.2rem;
-  margin: 10px 0;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--navy);
+  letter-spacing: 3px;
 }
 
-/* ================================
-   SEARCH BAR
-================================ */
 .search-bar {
-  margin: 10px auto 20px auto;
-  max-width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px;
 }
 
 .search-bar input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid var(--maroon);
-  border-radius: 6px;
+  width: 60%;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: 1.5px solid var(--taupe);
+  background: white;
   font-size: 1rem;
-  background-color: white;
+  transition: 0.3s;
 }
 
-/* ================================
-   SECTION STYLE
-================================ */
+.search-bar input:focus {
+  border-color: var(--maroon);
+  outline: none;
+}
+
+#gallery-search {
+  display: none;
+}
+
 .gallery-section {
-  margin: 40px 0;
+  padding: 30px 5%;
 }
 
 .gallery-section h2 {
-  margin-bottom: 15px;
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 20px;
 }
 
-/* ================================
-   FLEXBOX CARD ROWS
-================================ */
 .card-row {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .gallery-card {
-  background-color: white;
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
+  background: white;
   padding: 15px;
-  width: calc(33% - 14px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
+  border-radius: 12px;
+  border: 1px solid var(--taupe);
+  text-align: center;
+  transition: 0.3s;
 }
 
 .gallery-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transform: scale(1.02);
+  border-color: var(--maroon);
 }
 
-.gallery-card p {
-  margin-top: 10px;
+.gallery-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-/* ================================
-   FEATURED LARGE BLOCKS
-================================ */
 .featured-large {
-  margin: 50px 0;
+  padding: 40px 5%;
+}
+
+.featured-large h2 {
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 25px;
 }
 
 .large-block {
-  background-color: white;
-  border: 1px solid var(--border-light);
-  border-radius: 10px;
+  margin-bottom: 35px;
+  background: white;
+  border-radius: 15px;
   padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid var(--taupe);
+  transition: 0.3s;
 }
 
-/* ================================
-   FOOTER
-================================ */
+.large-block:hover {
+  border-color: var(--maroon);
+}
+
+.large-block img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
 footer {
   text-align: center;
   padding: 25px;
-  background-color: var(--cream-light);
-  border-top: 2px solid var(--border-light);
-  margin-top: 40px;
+  color: var(--espresso);
+  font-size: 0.9rem;
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
-
-/* Tablets */
-@media (max-width: 900px) {
-
-  .gallery-card {
-    width: calc(50% - 14px);
-  }
-
-  .navbar {
-    gap: 10px;
-  }
-
-  .page-title {
-    font-size: 1.8rem;
-  }
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
-
-  .navbar {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .gallery-card {
-    width: 100%;
-  }
-
-  .card-row {
-    flex-direction: column;
-  }
-
   .page-title {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 
-  main {
-    padding: 15px;
+  .search-bar input {
+    width: 80%;
   }
 }
