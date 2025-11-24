@@ -1,0 +1,212 @@
+/* ================================
+   COLOR PALETTE
+================================ */
+:root {
+  --maroon: #7A1F2A;
+  --maroon-dark: #611822;
+
+  --cream: #FFF8F0;
+  --cream-light: #F7F2EB;
+
+  --navy: #12345B;
+  --navy-light: #1A4A7A;
+
+  --espresso: #3B2414;
+  --border-light: #DCCFC2;
+}
+
+/* ================================
+   GLOBAL STYLES
+================================ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--espresso);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+h1, h2 {
+  color: var(--maroon-dark);
+}
+
+main {
+  padding: 20px;
+}
+
+/* ================================
+   HEADER + NAVIGATION
+================================ */
+.site-header {
+  background-color: var(--cream-light);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: var(--navy-light);
+  color: white;
+}
+
+.navbar .active {
+  background-color: var(--maroon);
+  color: white;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  margin: 10px 0;
+}
+
+/* ================================
+   SEARCH BAR
+================================ */
+.search-bar {
+  margin: 10px auto 20px auto;
+  max-width: 400px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--maroon);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+/* ================================
+   SECTION STYLE
+================================ */
+.gallery-section {
+  margin: 40px 0;
+}
+
+.gallery-section h2 {
+  margin-bottom: 15px;
+}
+
+/* ================================
+   FLEXBOX CARD ROWS
+================================ */
+.card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gallery-card {
+  background-color: white;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(33% - 14px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-card p {
+  margin-top: 10px;
+}
+
+/* ================================
+   FEATURED LARGE BLOCKS
+================================ */
+.featured-large {
+  margin: 50px 0;
+}
+
+.large-block {
+  background-color: white;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--cream-light);
+  border-top: 2px solid var(--border-light);
+  margin-top: 40px;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+  .gallery-card {
+    width: calc(50% - 14px);
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .gallery-card {
+    width: 100%;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
