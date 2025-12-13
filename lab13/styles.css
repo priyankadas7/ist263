@@ -1,17 +1,20 @@
 
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-/* ========== GLOBAL STYLES ========== */
 body {
-  background-color: #fdf0d5;   /* Cream background */
-  color: #003049;              /* Navy text */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fdf0d5;   
+  color: #003049;              
+  font-family: 'Limelight', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #780000;              /* Deep Burgundy for headings */
-  font-weight: 700;
+  color: #780000;              
   letter-spacing: 0.5px;
   text-align: center;
 }
@@ -22,19 +25,19 @@ p {
 }
 
 a {
-  color: #c1121f;              /* Bright Red for links */
+  color: #c1121f;             
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #669bbc;              /* Soft Blue on hover */
+  color: #669bbc;              
   text-decoration: underline;
 }
 
-/* ========== NAVIGATION ========== */
+
 nav {
-  background-color: #003049;   /* Navy background */
+  background-color: #003049;   
   padding: 10px;
   margin-bottom: 30px;
   display: flex;
@@ -44,7 +47,7 @@ nav {
 }
 
 nav a {
-  color: #fdf0d5;              /* Cream nav links */
+  color: #fdf0d5;             
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -54,16 +57,15 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #c1121f;   /* Bright Red highlight */
+  background-color: #c1121f;   
   color: #fdf0d5;
   transition: all 0.3s ease;
 }
 
 nav span {
-  color: #fdf0d5; /* Cream pipes */
+  color: #fdf0d5; 
 }
 
-/* ========== FLEXIBLE IMAGE ========== */
 .responsive-img {
   max-width: 100%;
   height: auto;
@@ -71,7 +73,6 @@ nav span {
   margin: 0 auto;
 }
 
-/* ========== CONTACT PAGE FLEXBOX LAYOUTS ========== */
 .container1,
 .container2 {
   display: flex;
@@ -83,7 +84,7 @@ nav span {
 }
 
 .container2 {
-  flex-wrap: wrap; /* Enables wrapping for mobile/tablet */
+  flex-wrap: wrap; 
 }
 
 .address,
@@ -106,13 +107,11 @@ nav span {
   margin-right: 8px;
 }
 
-/* ========== FORM STYLING ========== */
 form {
   display: block;
   line-height: 1.8;
 }
 
-/* ========== MAP ========== */
 iframe {
   width: 100%;
   height: 400px;
@@ -120,14 +119,13 @@ iframe {
   border-radius: 1em;
 }
 
-/* ========== FOOTER ========== */
 footer {
   text-align: center;
   padding: 10px;
   color: #003049;
 }
 
-/* ========== RESPONSIVE MEDIA QUERY ========== */
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -142,7 +140,7 @@ footer {
   }
 
   nav span {
-    display: none; /* Hide pipes on mobile */
+    display: none; 
   }
 
   .container1,
