@@ -9,9 +9,9 @@
   text-decoration: none;
   color: var(--espresso);
   font-weight: 600;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 20px;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .navbar a:hover,
@@ -433,4 +433,19 @@ main section img {
 .collection-grid img:hover {
   transform: scale(1.1) rotate(1deg);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: var(--navy);
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 10px;
 }
